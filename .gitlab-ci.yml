@@ -11,8 +11,9 @@ compile:
     - git clone https://github.com/DPDmancul/Apple-Emoji.git
     - mv Apple-Emoji/* .
     - mkdir pdf
-    - cd pdf
-    - for i in ../Lezione*.tex ../testo.tex ; do pdflatex "$i";pdflatex "$i";pdflatex "$i"; done
+    - for i in Lezione*.tex testo.tex ; do pdflatex "$i";pdflatex "$i";pdflatex "$i"; done
+    - mv Lezione*.pdf pdf
+    - mv testo.pdf pdf
   artifacts:
     paths:
       - pdf/*.pdf
