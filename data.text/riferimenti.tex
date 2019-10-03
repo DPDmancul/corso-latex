@@ -1,0 +1,19 @@
+\section{Riferimenti}
+  \texttt{Nel bel mezzo del cammin di nostra vita\textbackslash label\{sec:Prologo\}}\label{sec:Prologo}\\~\\
+  \texttt{Come si legge nella sezione \textbackslash ref\{sec:Prologo\} a pagina \textbackslash pageref\{sec:Prologo\}}\\
+ Come si legge nella sezione \ref{sec:Prologo} a pagina \pageref{sec:Prologo}
+ \begin{table}[!ht]\centering
+ \begin{tabular}{l|l}
+  prefisso & ambiente\\\hline
+  ch: 	&chapter\\
+  sec: 	&section\\
+  subsec: 	&subsection\\
+  fig: 	&figure\\
+  tab: 	&table\\
+  eq: 	&equation\\
+\end{tabular}\end{table}
+\\Se si vuole che nel pdf risualtante i riferimenti siano cliccabili (come dei link) bisogna aggiungere nel preambolo: \verb!\usepackage[hidelinks]{hyperref}! (se non si mette [hidelinks] i link saranno circondati di un colore che li contraddistingue in base al tipo di referenze secondo alcuni standard,
+\hypersetup{pdfborder={0 0 0.5}}
+ esempio: nella sezione \ref{sec:Prologo}
+\hypersetup{hidelinks})
+

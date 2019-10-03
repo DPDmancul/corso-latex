@@ -1,0 +1,32 @@
+\section{Matematica}
+Per le formule matemtiche e per altri simboli occorre includere i seguenti pacchetti (nel preambolo):
+\verb!\usepackage{amsmath,amssymb}!
+\subsection{Formule in linea}
+  \texttt{Come tutti sanno \textbf{\$2\^{}2 = 4\$} e \textbf{\$2 \textbackslash times 2 = 4\$}}\\
+  Come tutti sanno $2^2 = 4$ e $2 \times 2= 4$
+\subsection{Formule in evidenza}
+  \texttt{Data la funzione: \textbf{\textbackslash[ f(x)= x\^{}2 + \textbackslash frac\{x\}\{2\} \textbackslash]}}\\~\\
+  Data la funzione: \[ f(x)= x^2 + \frac{x}{2} \]
+\subsection{Formule in evidenza numerate}
+  \texttt{Data la funzione: \textbf{\textbackslash begin\{equation\} f(x):= x\^{}2 + \textbackslash frac\{x\}\{2\} \\ \textbackslash label\{eq:\emph{nomeFormula}\} \textbackslash end\{equation\}}}\\~\\
+Data la funzione: \begin{equation} f(x):= x^2 + \frac{x}{2} \label{eq:nomeFormula}\end{equation}
+  \texttt{Vedi formula \textbf{\textbackslash ref\{eq:\emph{nomeFormula}\}}}\\~\\
+Vedi formula \ref{eq:nomeFormula}\\
+Perché il numero compaia giusto bisogna compilare 2 volte.
+\subsection{Esempi}
+\verb!\forall x \in X, \quad \exists y \leq \epsilon!\[\forall x \in X, \quad \exists y \leq \epsilon\]
+  \verb!\cos (2\theta) = \cos^2 \theta - \sin^2 \theta!\[\cos (2\theta) = \cos^2 \theta - \sin^2 \theta\]
+  \verb!\lim_{x \to \infty} \exp(-x) = 0! \[
+  \lim_{x \to \infty} \exp(-x) = 0\]
+  \verb!x \equiv a \pmod{b}! \[x \equiv a \pmod{b}\]
+  \verb!k_{n+1} = n^2 + k_n^2 - k_{n-1}!\[k_{n+1} = n^2 + k_n^2 - k_{n-1}\]
+  \verb!\sqrt{2} \sqrt[n]{\frac{a}{b}}! \[\sqrt2 ~~~~ \sqrt[n]{\frac{a}{b}}\]
+  \verb!\sum_{i=1}^{10} t_i! \[\sum_{i=1}^{10} t_i\]
+  \verb!\displaystyle\sum_{i=1}^{10} t_i! \[\displaystyle\sum_{i=1}^{10} t_i\]
+  \verb!\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x! \[\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x\]
+  \verb!A_{2,2} = \begin{pmatrix}         !\\
+  \verb!              a_{1,1} & a_{1,2} \\!\\
+  \verb!              a_{2,1} & a_{2,2}   !\\
+  \verb!          \end{pmatrix}           !\\~\\
+    \[A_{2,2} = \begin{pmatrix}a_{1,1} & a_{1,2} \\a_{2,1} & a_{2,2}\end{pmatrix}\]
+

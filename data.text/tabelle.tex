@@ -1,0 +1,29 @@
+\section{Tabelle}
+  \verb!\begin{tabular}{lc|r}                   !\\
+  \verb!  Nome        & Cognome & Età \\ \hline !\\
+  \verb!  Pinco Tizio & Pallino & 6 \\          !\\
+  \verb!  Mario       & Rossi   & 23            !\\
+  \verb!\end{tabular}                           !\\~\\
+    \begin{tabular}{lc|r}
+      Nome & Cognome & Età \\ \hline
+      Pinco Tizio & Pallino & 6 \\
+      Mario & Rossi & 23
+    \end{tabular}\\
+~\\~
+    \\\verb!\begin{table}                       !\\
+    \\\verb!\centering %allinea la tabella al centro!\\
+    \verb!  \begin{tabular} ... \end{tabular} !\\
+    \verb!  \caption{Utenti del servizio}     !\\
+    \verb!  \label{tab:Utenti}                !\\
+    \verb!\end{table}                         !\\
+      \begin{table}[!h]\centering
+        \begin{tabular}{lc|r}
+          Nome & Cognome & Età \\ \hline
+          Pinco Tizio & Pallino & 6 \\
+          Mario & Rossi & 23
+        \end{tabular}
+        \caption{Utenti del servizio}
+        \label{tab:Utenti}
+      \end{table}
+      ~\\~\texttt{come si evince dalla tabella \textbackslash ref\{tab:Utenti\} \textbackslash dots} \\Come si evince dalla tabella \ref{tab:Utenti} \dots
+

@@ -1,0 +1,78 @@
+\section{Primi passi}
+\frame{\transfade\centering
+\frametitle{Tipologie di documento}
+\begin{itemize}
+  \item<2-> \textbf{\emph{article}} per scrivere articoli (scientifici) senza capitoli
+  \item<3-> \textbf{report} per scrivere relazioni o tesi suddivise in capitoli
+  \item<4-> \textbf{letter} per scrivere lettere
+  \item<5-> \textbf{\emph{book}} per scrivere libri
+  \item<6-> {\footnotesize\textbf{memoir} per scrivere libri complessi}
+  \item<7-> {\footnotesize\textbf{beamer} per presentazioni}
+  \item<8-> \textbf{\dots}
+  \end{itemize}
+}
+
+\begin{frame}[fragile]\transfade\centering
+\frametitle{Esempio minimale (1/2)}
+\begin{verbatim}
+  \documentclass[a4paper, 12pt]{report}
+    %    10pt, 11pt, 12 pt ↑      ↑ classe
+    %    twocolumn dispone il testo su due colonne
+
+  \pdfpagewidth\paperwidth      % per assicurarsi che nel pdf
+  \pdfpageheight\paperheight    % sia riempita tutta la pagina
+
+  \usepackage[italian]{babel}   % lingua usata nel documento
+  \usepackage[utf8]{inputenc}  % se non va usare utf8x
+  \usepackage[T1]{fontenc}
+\end{verbatim}\dots\\~
+\end{frame}
+\begin{frame}[fragile]\transfade\centering
+  \frametitle{Esempio minimale (2/2)}
+  {\small~\\[-0.5cm]\dots\\[-0.5cm]\begin{verbatim}
+    \begin{document}
+      \title{Titolo del documento}\author{Autore}\date{Data}
+      \maketitle
+
+      \tableofcontents  %indice
+
+      \chapter{Nome capitolo}
+        \section{Nome sezione}
+          \subsection{Nome sottosezione}
+            \subsubsection{Nome sotto-sottosezione}
+              testo
+
+    \end{document}
+  \end{verbatim}}
+\end{frame}
+
+\frame{\transfade\centering
+\frametitle{Font}
+\begin{itemize}
+  \item<2->{\texttt{\textbf{\textbackslash textbf}}\{testo\} \textbf{grassetto}}
+  \item<2->{\texttt{\textbf{\textbackslash emph}}\{testo\} \emph{italico} ("corsivo")}
+  \item<2->{\texttt{\textbf{\textbackslash texttt}}\{testo\} \texttt{monospace}}
+\end{itemize}
+\begin{itemize}
+  \item<3->{\{\texttt{\textbf{\textbackslash tiny}} testo \}}
+  \item<3->{\{\texttt{\textbf{\textbackslash footnotesize}} testo \}}
+  \item<3->{\{\texttt{\textbf{\textbackslash small}} testo \}}
+  \item<3->{\{\texttt{\textbf{\textbackslash large}} testo \}}
+  \item<3->{\{\texttt{\textbf{\textbackslash Large}} testo \}}
+\end{itemize}
+}
+
+\frame{\transfade\centering
+\frametitle{Ultimi dettagli}
+\visible<2->{Andare a capo}
+  \begin{itemize}
+    \item<2->{\texttt{\textbf{\textbackslash\textbackslash}} a capo}
+    \item<2->{\texttt{\textbf{\textbackslash par}} nuovo paragrafo}
+  \end{itemize}
+\visible<3->{Alcuni simboli}
+  \begin{itemize}
+    \item<3->{\texttt{\textbf{\textbackslash\$}} \$}
+    \item<3->{\texttt{\textbf{\textbackslash\%}} \%}
+    \item<3->{\texttt{\textbf{\textbackslash\_}} \_}
+  \end{itemize}
+}

@@ -1,0 +1,31 @@
+\section{Immagini}
+\begin{frame}\transfade\centering
+  \frametitle{Immagini in linea}
+\visible<3->{\texttt{\textbackslash usepackage\{graphicx\}}}\\
+\texttt{\textbackslash includegraphics\only<4->{[width=300px,height=50px]}\{disegno\}}\\~\\
+\only<2-3>{\includegraphics[height=100px]{img/disegno}}
+\only<4->{\includegraphics[width=300px,height=50px]{img/disegno}}~\\~
+\visible<5->{PDF, PNG e JPEG}
+\end{frame}
+\begin{frame}\transfade\centering
+  \frametitle{Perché in linea?}
+\texttt{Questa è \textbackslash includegraphics\{disegno\} una prova}\\~\\
+\only<2->{Questa è \includegraphics[height=100px]{img/disegno} una prova}
+\only<3->{\\Ciao {\footnotesize😀}, come va?}
+\end{frame}
+
+\begin{frame}[fragile]\transfade\centering
+  \frametitle{Immagini}
+  {\small\verb!\begin{figure}                       !\\
+  \verb!  \includegraphics{immagine}         !\\
+  \verb!  \caption{Disegno astratto}         !\\
+  \only<2->{\texttt{~~\textbackslash label\{fig:Disegno\}~~~~~~~~~~~~~~~~}\\}
+  \verb!\end{figure}                         !}
+  \begin{figure}[!ht]%
+    \includegraphics[height=50px]{img/disegno}%
+    \caption{Disegno astratto}%
+    \label{fig:Disegno}%
+  \end{figure}\vspace{-1.5em}%
+  \only<2->{\small\texttt{Visibile in figura \textbackslash ref\{fig:Disegno\}} $\Rightarrow$ Visibile in figura \ref{fig:Disegno}\\~}
+\end{frame}
+

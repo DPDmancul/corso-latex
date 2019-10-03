@@ -1,0 +1,40 @@
+\section{Chimica}
+\begin{frame}\centering
+  \frametitle{Chemfig}
+  \texttt{\textbackslash{}usepackage\{chemfig\} \%preambolo}\\
+ \texttt{\textbackslash{}chemfig\{<\textrm{atomo1}><\textrm{bond type}>[<\textrm{angolo}>, <\textrm{lunghezza}>, <\textrm{opzioni \Tikz}>]<\textrm{atomo2}>\}}\\~\\\pause{}Esempi minimali:\\
+ \begin{tabular}{l|l}
+  \textbackslash{}chemfig\{A-B\}&\chemfig{A-B}\\
+\hline
+  \textbackslash{}chemfig\{A=B\}&\chemfig{A=B}\\
+\hline
+  \textbackslash{}chemfig\{A\textasciitilde{}B\}&\chemfig{A~B}\\
+\hline
+  \textbackslash{}chemfig\{A>B\}&\chemfig{A>B}\\
+\hline
+  \textbackslash{}chemfig\{A<:B\}&\chemfig{A<:B}\\
+\hline
+  \textbackslash{}chemfig\{A>|B\}&\chemfig{A>|B}\\
+\hline
+ \end{tabular}
+\end{frame}
+\begin{frame}\centering
+  \frametitle{Una molecola}
+  \texttt{\textbackslash{}chemfig\{C(-[:0]H)(-[:90]H)(-[:180]H)(-[:270]H)\}}\\~\\
+  \chemfig{C(-[:0]H)(-[:90]H)(-[:180]H)(-[:270]H)}
+\end{frame}
+\begin{frame}\centering
+  \frametitle{Anelli}
+  \texttt{\textbackslash{}chemfig\{A*6(-B-C-D-E-F-)\}}\\~\\
+  \chemfig{A*6(-B-C-D-E-F-)}
+\end{frame}
+\begin{frame}\centering
+  \frametitle{Reazioni chimiche}
+  \begin{tabular}{l|l}
+  \textbackslash{}schemestart A\textbackslash{}arrow\{->\}B\textbackslash{}schemestop&\schemestart A\arrow{->}B\schemestop\\\hline
+  \textbackslash{}schemestart A\textbackslash{}arrow\{-/>\}B\textbackslash{}schemestop&\schemestart A\arrow{-/>}B \schemestop\\\hline
+  \textbackslash{}schemestart A\textbackslash{}arrow\{<-\}B\textbackslash{}schemestop&\schemestart A\arrow{<-}B \schemestop\\\hline
+  \textbackslash{}schemestart A\textbackslash{}arrow\{<->\}B\textbackslash{}schemestop&\schemestart A\arrow{<->}B \schemestop\\\hline
+  \textbackslash{}schemestart A\textbackslash{}arrow\{<=>\}B \textbackslash{}+ C\textbackslash{}schemestop&\schemestart A \arrow{<=>}B \+ C\schemestop\\
+ \end{tabular}
+\end{frame}

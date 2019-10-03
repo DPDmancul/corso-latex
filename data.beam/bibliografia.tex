@@ -1,0 +1,30 @@
+\section{Bibliografia}
+\begin{frame}[fragile]\transfade\centering
+  \frametitle{Bibliografia}
+  \verb!\begin{thebibliography}{Numero massimo voci}               !\\
+  \verb!  \addcontentsline{toc}{section}{Bibliografia}             !\\
+  \verb!  \label{bibliografia}                                     !\\
+  ~\\
+  \verb!  \bibitem{WiFiStandard} %etichetta                        !\\
+  \verb!    Ian Poole,\\                                           !\\
+  \verb!    \emph{IEEE 802.11 Wi-Fi Standards},\\                  !\\
+  \verb!    \url{http://www.radio.../ieee-802-11-standards.php},\\ !\\
+  \verb!    consultato il 3 Giugno 2017.                           !\\
+  ~\\
+  \verb! \end{thebibliography}                                     !\\~
+\end{frame}
+\begin{frame}[fragile]\transfade\centering
+  \frametitle{Richiami}
+  \verb!... che utilizza modulazioni digitali \cite{WiFiStandard}!\\~\\~
+  \visible<2->{... che utilizza modulazioni digitali~\cite{WiFiStandard}}\\~
+  \only<3->{
+    \begin{thebibliography}{8}
+\setbeamertemplate{bibliography item}[text]
+    \bibitem{WiFiStandard}
+      Ian Poole,\\
+      \emph{IEEE 802.11 Wi-Fi Standards},\\
+      \url{http://www.radio-electronics.com/info/wireless/wi-fi/ieee-802-11-standards-tutorial.php},\\
+      consultato il 3 Giugno 2017.
+    \end{thebibliography}
+  }
+\end{frame}

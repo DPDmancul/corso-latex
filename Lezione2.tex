@@ -1,10 +1,7 @@
 \documentclass[aspectratio=169,compress]{beamer}
-\pdfpagewidth\paperwidth
-\pdfpageheight\paperheight
-\usepackage[greek,italian]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern,amsmath,amssymb,cclicenses,graphicx,apple_emoji,adjustbox}
+
+\newcommand{\iclass}{beam}
+\input{fnc/import.tex}
 
 \usetheme[background=light]{metropolis}%numbering=none
 \useoutertheme{split}
@@ -18,7 +15,7 @@
 \author{Davide Peressoni}
 \institute[]{Commissione Informatica\\Collegio Universitario don Nicola Mazza}
 \date%[DATE CURTE]
-{19 Dicembre 2018}
+{28 Ottobre 2019}
 \titlegraphic{\includegraphics[height=80px]{ComInfo}}
 
 \setbeamertemplate{title page}{
@@ -50,156 +47,10 @@
   \tiny\input{license.tex}
 }
 
-\section{Tabelle}
-\begin{frame}[fragile]\transfade\centering
-  \frametitle{Tabelle semplici}
-\verb!\begin{tabular}{lc|r}                   !\\
-\verb!  Nome        & Cognome & Età \\ \hline !\\
-\verb!  Pinco Tizio & Pallino & 6 \\          !\\
-\verb!  Mario       & Rossi   & 23            !\\
-\verb!\end{tabular}                           !\\~\\
-  \begin{tabular}{lc|r}
-    Nome & Cognome & Età \\ \hline
-    Pinco Tizio & Pallino & 6 \\
-    Mario & Rossi & 23
-  \end{tabular}\\~
-\end{frame}
-\begin{frame}[fragile]\transfade\centering
-  \frametitle{Tabelle}
-\verb!\begin{table}                       !\\
-\verb!  \begin{tabular} ... \end{tabular} !\\
-\verb!  \caption{Utenti del servizio}     !\\
-\only<2->{\texttt{~~\textbackslash label\{tab:Utenti\}~~~~~~~~~~~~~~~~}\\}
-\verb!\end{table}                         !\\
-  \only<1>{\begin{table}
-    \begin{tabular}{lc|r}
-      Nome & Cognome & Età \\ \hline
-      Pinco Tizio & Pallino & 6 \\
-      Mario & Rossi & 23
-    \end{tabular}
-    \caption{Utenti del servizio}
-    \label{tab:Utenti}
-  \end{table}}
-  \only<2->{~\\~\\~\texttt{come si evince dalla tabella \textbackslash ref\{tab:Utenti\} \textbackslash dots} \\Come si evince dalla tabella \ref{tab:Utenti} \dots}~\\
-\end{frame}
-
-\section{Immagini}
-\begin{frame}\transfade\centering
-  \frametitle{Immagini in linea}
-\visible<3->{\texttt{\textbackslash usepackage\{graphicx\}}}\\
-\texttt{\textbackslash includegraphics\only<4->{[width=300px,height=50px]}\{disegno\}}\\~\\
-\only<2-3>{\includegraphics[height=100px]{img/disegno}}
-\only<4->{\includegraphics[width=300px,height=50px]{img/disegno}}~\\~
-\visible<5->{PDF, PNG e JPEG}
-\end{frame}
-\begin{frame}\transfade\centering
-  \frametitle{Perché in linea?}
-\texttt{Questa è \textbackslash includegraphics\{disegno\} una prova}\\~\\
-\only<2->{Questa è \includegraphics[height=100px]{img/disegno} una prova}
-\only<3->{\\Ciao {\footnotesize😀}, come va?}
-\end{frame}
-
-\begin{frame}[fragile]\transfade\centering
-  \frametitle{Immagini}
-  {\small\verb!\begin{figure}                       !\\
-  \verb!  \includegraphics{immagine}         !\\
-  \verb!  \caption{Disegno astratto}         !\\
-  \only<2->{\texttt{~~\textbackslash label\{fig:Disegno\}~~~~~~~~~~~~~~~~}\\}
-  \verb!\end{figure}                         !}
-  \begin{figure}[!ht]%
-    \includegraphics[height=50px]{img/disegno}%
-    \caption{Disegno astratto}%
-    \label{fig:Disegno}%
-  \end{figure}\vspace{-1.5em}%
-  \only<2->{\small\texttt{Visibile in figura \textbackslash ref\{fig:Disegno\}} $\Rightarrow$ Visibile in figura \ref{fig:Disegno}\\~}
-\end{frame}
-
-\section{Riferimenti}
-\frame{\transfade\centering
-  \frametitle{Riferimenti}
-  \texttt{Nel bel mezzo del cammin di nostra vita\textbackslash label\{ch:Prologo\}}\\~\\
-  \visible<2->{\texttt{Come si legge nel capitolo \textbackslash ref\{ch:Prologo\} a pagina \textbackslash pageref\{ch:Prologo\}}}\\
-  \visible<3->{Come si legge nel capitolo 1 a pagina 3}
-}
-\frame{\transfade\centering
-  \frametitle{Tipi di riferimento}
-  \begin{tabular}{l|l}
-    prefisso & ambiente\\\hline
-    ch: 	&chapter\\
-    sec: 	&section\\
-    subsec: 	&subsection\\
-    fig: 	&figure\\
-    tab: 	&table\\
-    eq: 	&equation\\
-  \end{tabular}
-}
-\begin{frame}[fragile]\transfade\centering
-  \frametitle{Riferimenti ipertestuali}
-  \verb!\usepackage[hidelinks]{hyperref}!\\~
-\end{frame}
-
-\section{Bibliografia}
-\begin{frame}[fragile]\transfade\centering
-  \frametitle{Bibliografia}
-  \verb!\begin{thebibliography}{Numero massimo voci}               !\\
-  \verb!  \addcontentsline{toc}{section}{Bibliografia}             !\\
-  \verb!  \label{bibliografia}                                     !\\
-  ~\\
-  \verb!  \bibitem{WiFiStandard} %etichetta                        !\\
-  \verb!    Ian Poole,\\                                           !\\
-  \verb!    \emph{IEEE 802.11 Wi-Fi Standards},\\                  !\\
-  \verb!    \url{http://www.radio.../ieee-802-11-standards.php},\\ !\\
-  \verb!    consultato il 3 Giugno 2017.                           !\\
-  ~\\
-  \verb! \end{thebibliography}                                     !\\~
-\end{frame}
-\begin{frame}[fragile]\transfade\centering
-  \frametitle{Richiami}
-  \verb!... che utilizza modulazioni digitali \cite{WiFiStandard}!\\~\\~
-  \visible<2->{... che utilizza modulazioni digitali~\cite{WiFiStandard}}\\~
-  \only<3->{
-    \begin{thebibliography}{8}
-\setbeamertemplate{bibliography item}[text]
-    \bibitem{WiFiStandard}
-      Ian Poole,\\
-      \emph{IEEE 802.11 Wi-Fi Standards},\\
-      \url{http://www.radio-electronics.com/info/wireless/wi-fi/ieee-802-11-standards-tutorial.php},\\
-      consultato il 3 Giugno 2017.
-    \end{thebibliography}
-  }
-\end{frame}
-
-\section{Inserire simboli}
-\frame{\transfade\centering
-  \frametitle{Siti}
-  \begin{thebibliography}{8}
-    \setbeamertemplate{bibliography item}[online]
-    \bibitem{}
-      Simboli matematici\\
-      \url{https://en.wikibooks.org/wiki/LaTeX/Mathematics}
-\\~\\~\\
-    \setbeamertemplate{bibliography item}[article]
-    \bibitem{}
-      Tutti(?) i simboli\\
-      \url{http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf}
-    \end{thebibliography}
-}
-\frame{\transfade\centering
-  \frametitle{Detextify}
-  \url{http://detexify.kirelabs.org}
-  \only<2->{~\\~\includegraphics[height=0.7\paperheight]{img/detex}}
-}
-
-\appendix
-\section{Scrivere in greco}
-\begin{frame}[fragile]\transfade\centering
-  \frametitle{Scrivere in greco}
-  Nel preambolo: \verb!\usepackage[greek,italian]{babel}!\\
-  Nel documento: \\
-  \verb!\TeX~deriva dal greco \begin{otherlanguage}{greek}t'eqnh!\\
-  \verb!\end{otherlanguage}~(arte, tecnica)!\\
-  \visible<2->{\TeX~deriva dal greco \begin{otherlanguage}{greek}t'eqnh\end{otherlanguage}~(arte, tecnica)}\\~
-\end{frame}
+\import{riferimenti}
+\import{bibliografia}
+\import{tabelle}
+\import{matematica}
 
 \setbeamercolor{background canvas}{bg=black}
 \frame[plain]{\transfade}

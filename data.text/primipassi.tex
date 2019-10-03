@@ -1,0 +1,70 @@
+\section{Tipologie di documento}
+\begin{itemize}
+  \item \textbf{\emph{article}} per scrivere articoli (scientifici) senza capitoli
+  \item \textbf{report} per scrivere relazioni o tesi suddivise in capitoli
+  \item \textbf{letter} per scrivere lettere
+  \item \textbf{\emph{book}} per scrivere libri
+  \item {\footnotesize\textbf{memoir} per scrivere libri complessi}
+  \item {\footnotesize\textbf{beamer} per presentazioni}
+  \item \textbf{\dots}
+\end{itemize}
+
+\section{Esempio minimale}
+\begin{verbatim}
+  \documentclass[a4paper, twocolumn, 12pt]{report}
+    %               10pt, 11pt, 12 pt ↑       ↑ classe
+    %    twocolumn dispone il testo su due colonne
+
+  \pdfpagewidth\paperwidth      % per assicurarsi che nel pdf
+  \pdfpageheight\paperheight    % sia riempita tutta la pagina
+
+  \usepackage[italian]{babel}   % lingua usata nel documento
+  \usepackage[utf8]{inputenc}  % se non va usare utf8x o alla peggio latin1
+  \usepackage[T1]{fontenc}
+
+  \begin{document}
+    \title{Titolo del documento}\author{Autore}\date{Data}
+    \maketitle
+
+    \tableofcontents  %indice
+
+    \chapter{Nome capitolo}
+      testo
+      \section{Nome sezione}
+        testo
+        \subsection{Nome sottosezione}
+          testo
+          \subsubsection{Nome sotto-sottosezione}
+            testo
+
+  \end{document}
+  \end{verbatim}
+
+  \subsection{Andare a capo}
+  \begin{itemize}
+    \item{\texttt{\textbf{\textbackslash\textbackslash}} a capo}
+    \item{\texttt{\textbf{\textbackslash par}} nuovo paragrafo}
+  \end{itemize}
+\subsection{Alcuni simboli}
+  \begin{itemize}
+    \item{\texttt{\textbf{\textbackslash\$}} \$}
+    \item{\texttt{\textbf{\textbackslash\%}} \%}
+    \item{\texttt{\textbf{\textbackslash\_}} \_}
+  \end{itemize}
+  In genere tutti i simboli che hanno un significato in \LaTeX{} (vedremo che avrenno questo ruolo \&, \$, \^{}, \_, \dots) si scrivono come sopra.
+
+\section{Font}
+  \subsection{Stili principali}
+  \begin{itemize}
+    \item{\texttt{\textbf{\textbackslash textbf}}\{testo\} \textbf{grassetto}}
+    \item{\texttt{\textbf{\textbackslash emph}}\{testo\} \emph{italico} ("corsivo")}
+    \item{\texttt{\textbf{\textbackslash texttt}}\{testo\} \texttt{monospace}}
+  \end{itemize}
+  \subsection{Dimensioni principali}
+  \begin{itemize}
+    \item{\{\texttt{\textbf{\textbackslash tiny}} \tiny testo \}}
+    \item{\{\texttt{\textbf{\textbackslash footnotesize}} \footnotesize testo \}}
+    \item{\{\texttt{\textbf{\textbackslash small}} \small testo \}}
+    \item{\{\texttt{\textbf{\textbackslash large}} \large testo \}}
+    \item{\{\texttt{\textbf{\textbackslash Large}} \Large testo \}}
+  \end{itemize}

@@ -1,0 +1,16 @@
+\section{Note}
+\begin{frame}[fragile]\transfade\centering
+  \frametitle{Note a piè di pagina}
+  \verb!Questo è un testo\footnote{è un testo molto corto} di prova!\\~\\
+  \only<2->{Questo è un testo\footnote{è un testo molto corto} di prova}~\\~
+\end{frame}
+\begin{frame}\transfade\centering
+  \frametitle{Note al margine}
+  \begin{columns}
+    \column{.1\textwidth}
+      \only<2->{~\\[5px]$A = l^2$}
+    \column{.9\textwidth}
+      \texttt{L'area\textbackslash marginpar\{\$A = l\^{}2\$\} del quadrato vale 5}\\~\\
+      \only<2->{L'area del quadrato vale 5}~\\~
+  \end{columns}
+\end{frame}

@@ -1,0 +1,27 @@
+\section{Bibliografia}
+\verb!\begin{thebibliography}{Numero massimo voci} !\\
+  \verb!  \addcontentsline{toc}{section}{Bibliografia} !\\
+  \verb!  \label{bibliografia} !\\
+  ~\\
+  \verb!  \bibitem{WiFiStandard} %etichetta!\\
+  \verb!    Ian Poole,\\ !\\
+  \verb!    \emph{IEEE 802.11 Wi-Fi Standards},\\ !\\
+  \verb!    \url{http://www.radio-electronics.com/info/wireless/wi-fi/!\\
+  \verb!         ieee-802-11-standards-tutorial.php},\\ !\\
+  \verb!    consultato il 3 Giugno 2017. !\\
+  ~\\
+  \verb! \end{thebibliography} !\\~\par
+  Il numero massimo di voci serve all'allineamento dei numeri, è consigliato scrivere tanti 8 quante le cifre del numero più grande (ad esempio se avete 15 libri in bibliografia scrivete 88).
+
+      \begin{thebibliography}{8}
+        \bibitem{WiFiStandard}
+          Ian Poole,\\
+          \emph{IEEE 802.11 Wi-Fi Standards},\\
+          \url{http://www.radio-electronics.com/info/wireless/wi-fi/ieee-802-11-standards-tutorial.php},\\
+          consultato il 3 Giugno 2017.
+      \end{thebibliography}
+\subsection{Richiamo della bibliografia}
+\texttt{... che utilizza modulazioni digitali \textbackslash cite\{WiFiStandard\}}~\\~
+... che utilizza modulazioni digitali~\cite{WiFiStandard}\\~
+
+
